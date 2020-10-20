@@ -1,0 +1,297 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Sans", sans-serif;
+}
+html{
+	scroll-behavior: smooth;
+}
+.container{
+	padding: 0 100px 0 100px;
+}
+nav ul,
+.main-info-section,
+.work-category{
+
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+body{
+	background-color: #252627;
+}
+header{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+padding: 20px 0;	
+line-height: 0.15;
+}
+.navbar{
+	background-color: #f3f0f0;
+}
+header,nav:hover{
+	color: #ED5565;
+}
+header h1,
+header a,
+.text p,
+.about h1,
+.skills h1,
+.work h1,
+.contact h1{
+	color:#707070;
+}
+nav a:hover {
+  color:#ED5565;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+  position: relative;
+}
+li{
+	list-style: none;
+	margin-left: 30px;
+}
+a{
+	text-decoration: none;
+	font-size: .9rem;
+	text-transform: uppercase;
+	position: relative;
+	top: 50%;
+	bottom:50%;
+	transform: translate(-50%);
+}
+
+.main-info-section{
+	height: calc(100vh - 81.6px);
+}
+.text{
+	margin-top: 120px;
+}
+.text h1{
+	color: #fff;
+	font-size: 3rem;
+	cursor:context-menu;
+}
+.text span{
+	display: inline-block;
+}
+span:hover{
+	color: #ED5565;
+}
+span.m-left{
+	margin-left: -10px;
+}
+.text p{
+	letter-spacing: 3px;
+	word-spacing: 10px;
+	font-size: .8rem;
+}
+.text a{
+	margin-left:100px;
+	padding: 12px 25px;
+	border: 3px solid #ED5565;
+	color: #ED5565;
+	font-size: .8rem;
+	letter-spacing: 2px;
+	position: relative;
+	top: 80px;
+	overflow: hidden;
+	transition: .5s;
+	display: inline-block;
+}
+.text a:hover{
+	color: #fff;
+}
+.text a::before{
+	content: '';
+	background-color: #ED5565;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100px;
+	height: 0%;
+	z-index: -1;
+	transition: .5s;
+}
+
+.text a:hover::before{
+	height:100%;
+}
+.profile-image img{
+	 width:600px;
+	 margin-top: 50px;	
+}
+.skills h1,
+.about h1,
+.work h1{
+	font-size: 10rem;
+	z-index: 0;
+	opacity: .1;
+}
+.about-me-info{
+
+max-width: 900px;
+background-color: #adbac7;
+box-shadow: 0 0 1.2rem rgba(0,0,0,.25);
+padding: 50px;
+position: relative;
+top: -70px;
+left: 50%;
+right: 50%;
+transform: translateX(-50%);
+z-index: 1;
+}
+a.about-me-info p{
+	font-size: 1.3rem;
+	color: #BEBEBE;
+}
+
+.about-me-info p:nth-child(2),
+.about-me-info p:last-child{
+	margin-top: 30px;
+}
+.about img{
+	width: 300px;
+	position: relative;
+	top: -300px;
+	left: calc(100% - 100px);
+	right:calc(100% - 100px);
+	transform: translateX(calc(-100% + 100px));
+
+}
+.skills h1{
+	font-size:10rem;
+	color:#707070;
+}
+.skills-info{
+		max-width: 900px;
+		background-color: #adbac7;
+		box-shadow: 0 0 1.2rem rgba(0,0,0,.25);
+		padding: 50px;
+		position: relative;
+		top: -70px;
+		left: 50%;
+		right: 50%;
+		transform: translateX(-50%);
+		z-index: 1;
+}
+.html{
+	font-size: 36px;
+	color: #fff;
+	padding: 20px;
+	margin: 50px;
+}
+.progressbar{
+    padding: 2px;
+	margin: 2px;
+	border: 1px solid #fff;
+	background: #777070;
+}
+
+
+.bar-html {width: 95%;padding: 5px; background-color: #4CAF50;} /* Green */
+.bar-css{width:80%;padding: 5px; background-color: #2196F3;} /* Blue */
+.bar-javascript{width: 65%; padding: 5px; background-color: #f44336;} /* Red */
+.bar-php {width: 60%; padding: 5px; background-color: #803fc1;} /* blueviolet Grey */
+
+.work a{
+	justify-self:center;
+	position: relative;
+	display: inline-block;
+}
+.work-category .active{
+	background-color: #ED5565;
+}
+.tabcontent a img{
+	margin-left:50%; 
+	width: 350px;
+	justify-self:center;
+
+}
+.tab {
+	width: 100%;
+    overflow: hidden;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  border-radius: 10px;
+  float: left;
+  cursor: pointer;
+  padding: 14px;
+  width: 30%;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color:#2196F3;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ED5565;
+}
+
+/* Style the tab content */
+
+input,.fname,
+.lname{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  
+  width: 80%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 10%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+label{
+	color:#fff;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.form {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+
